@@ -7,36 +7,66 @@
 
 int main() {
 
+    /*
+    // Variáveis Inteiras:
+    int a = 50; // Variável inteira em Decimal
+    int b = 050; // Variável inteira em Octal
+    int c = 0x50; // Variável inteira em Hexadecimal
+    printf("Em decimal: %d | Em Octal: %d | Em Hexadecimal: %d\n", a, b, c);
+
+    */
+    
+    // Declarando variáveis do tipo inteiro
     int n1, n2, resultado;
+
+    // Declarando varíavel do tipo char
     char ch;
+
+    // Solicitando entrada do tipo char para usuario
     printf ("Digite uma operacao matematica (+ | - | * | /): ");
     ch = getchar();
-    printf("Digite 2 numeros: ");
-    scanf("%d %d", &n1, &n2);
 
-    switch (ch) {
-        case '+':
-            resultado = soma(n1, n2); 
-            break;
+    //Switch-Case
+        switch (ch) {
+            case '+':
+                printf("Digite o primeiro numero: ");
+                scanf("%d", &n1);
+                printf("Digite o segundo numero: ");
+                scanf("%d", &n2);
 
-        case '-':
-            resultado = subtracao(n1, n2);
-            break;
+                printf("O resultado eh: %d\n", n1 + n2); 
+                break;
 
-        case '*':
-            resultado = multiplicacao(n1, n2);
-            break;
+            case '-':
+                printf("Digite o primeiro numero: ");
+                scanf("%d", &n1);
+                printf("Digite o segundo numero: ");
+                scanf("%d", &n2);
 
-        case '/':
-            resultado = divisao(n1, n2);
-            break;
+                printf("O resultado eh: %d\n", n1 - n2);
+                break;
 
-        default:
-            printf("Você digitou uma opção inválida\n");
+            case '*':
+                printf("Digite o primeiro numero: ");
+                scanf("%d", &n1);
+                printf("Digite o segundo numero: ");
+                scanf("%d", &n2);
 
-    }
+                printf("O resultado eh: %d\n", n1 * n2);
+                break;
 
-    printf("Resultado = %d\n", resultado);
+            case '/':
+                printf("Digite o primeiro numero: ");
+                scanf("%d", &n1);
+                printf("Digite o segundo numero: ");
+                scanf("%d", &n2);
+
+                printf("O resultado eh: %d\n", n1 / n2);
+                break;
+            
+            default:
+                printf("Valor digitado eh invalido! Encerrando programa!\n");
+        }
 
     system("pause");
     return 0;
